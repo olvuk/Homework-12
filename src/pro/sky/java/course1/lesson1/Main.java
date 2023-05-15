@@ -5,16 +5,25 @@ public class Main {
         Author levTolstoy = new Author("Лев", "Толстой");
         Author mihailLermontov = new Author("Михаил", "Лермонтов");
         Author aleksandrPushkin = new Author("Александр", "Пушкин");
+        Author aleksandrPeshkin = new Author("Александр", "Пушкин");
         Book vojnaIMir = new Book(levTolstoy, "Война и мир", 1863);
         Book maskarad = new Book(mihailLermontov, "Маскарад", 1835);
         Book pikovayaDama = new Book(aleksandrPushkin, "Пиковая дама", 1833);
+        Book pikovajaDama = new Book(aleksandrPushkin, "Пиковая дама", 1834);
 
-        System.out.println("Автор: " + levTolstoy.getName() + " " + levTolstoy.getSurname() + ", Название: " + vojnaIMir.getName() + ", Год написания: " + vojnaIMir.getYear());
-        System.out.println("Автор: " + mihailLermontov.getName() + " " + mihailLermontov.getSurname() + ", Название: " + maskarad.getName() + ", Год написания: " + maskarad.getYear());
-        System.out.println("Автор: " + aleksandrPushkin.getName() + " " + aleksandrPushkin.getSurname() + ", Название: " + pikovayaDama.getName() + ", Год написания: " + pikovayaDama.getYear());
+        System.out.println(aleksandrPushkin.equals(aleksandrPeshkin));
+        System.out.println(aleksandrPeshkin.hashCode());
+        System.out.println(aleksandrPushkin.hashCode());
+        System.out.println(pikovayaDama.equals(pikovajaDama));
+        System.out.println(pikovajaDama.hashCode());
+        System.out.println(pikovayaDama.hashCode());
+
+        System.out.println(vojnaIMir);
+        System.out.println(maskarad);
+        System.out.println(pikovayaDama);
 
         maskarad.setYear(1834);
-        System.out.println("Автор: " + mihailLermontov.getName() + " " + mihailLermontov.getSurname() + ", Название: " + maskarad.getName() + ", Год написания: " + maskarad.getYear());
+        System.out.println(maskarad);
 
 
 
